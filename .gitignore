@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Environment
+.env
+
+# Mac
+.DS_Store
+
+# Deep Learning model files
+*.pt
+*.pth
+
+# VS Code settings
+.vscode/
