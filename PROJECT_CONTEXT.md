@@ -85,7 +85,7 @@ Completed:
 
 Current structure:
 
-''''text
+''''
 ai-engineering/
 
 ├── main.py
