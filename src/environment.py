@@ -1,7 +1,7 @@
 import torch
 
-def check_enviroment():
-    print("AI Engineering Enviroment Check")
+def check_environment():
+    print("AI Engineering Environment Check")
 
     print(f"PyTorch Version: {torch.__version__}")
 
@@ -12,4 +12,4 @@ def check_enviroment():
 
 
 if __name__=="__main__":
-    check_enviroment()
+    check_environment()
