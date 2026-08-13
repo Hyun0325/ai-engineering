@@ -1,6 +1,6 @@
 # AI Engineering
 
-Mechanical Engineering based AI Learning & Research Portfolio
+Mechanical Engineering based AI Learning & Engineering Portfolio
 
 
 ## Introduction
