@@ -6,14 +6,18 @@ __pycache__/
 .ipynb_checkpoints/
 
 # Environment
+.conda/
 .env
 
 # Mac
 .DS_Store
 
-# Deep Learning model files
+# Trained AI models
 *.pt
 *.pth
 
 # VS Code settings
 .vscode/
+
+# Research data / private data
+data/
