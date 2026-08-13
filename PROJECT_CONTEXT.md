@@ -85,6 +85,7 @@ Completed:
 
 Current structure:
 
+''''text
 ai-engineering/
 
 ├── main.py
@@ -100,7 +101,7 @@ ai-engineering/
 ├── notebooks/
 ├── experiments/
 └── docs/
-
+'''
 
 ## Folder Purpose
 
