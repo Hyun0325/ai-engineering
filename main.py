@@ -1,5 +1,15 @@
-import torch
+from src.environment import check_environment
+from src.data_loader import load_data
 
-print("AI Engineering Start")
-print(torch.__version__)
-print(torch.backends.mps.is_available())
+def main():
+    print("AI Engineering Project")
+
+    check_environment()
+
+    data = load_data()
+
+    print(data)
+
+
+if __name__ == "__main__":
+    main()
