@@ -1,14 +1,9 @@
-import csv
+import pandas as pd
 
-def load_data():
-    print("Loading data...")
+def load_temperature_data():
 
-    data = []
+    print("Loading temperaturedata...")
 
-    with open("data/temperature.csv", "r") as file:
-        reader = csv.DictReader(file)
+    data = pd.read_csv("data/temperature.csv")
 
-        for row in reader:
-            data.append(row)
-            
     return data
