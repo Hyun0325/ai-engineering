@@ -1,4 +1,5 @@
 import pandas as pd
+import torch
 
 def load_temperature_data():
     data = pd.read_csv("data/temperature.csv")
@@ -9,9 +10,16 @@ def load_temperature_data():
     print(data)
     print(data.columns)
     print(data["temperature"])
- 
-    print("Maximum temperature:", data["temperature"].max())
-    print("Minimum temperature:", data["temperature"].min())
-    print("Average temperature:", data["temperature"].mean())
+
+    temperature = data["temperature"].to_numpy()
+
+    print("Numpy array:")
+    print(temperature)
+    print(type(temperature))
+
+    temperature_tensor = torch.tensor(temperature)
+    print("PyTorch tensor:")
+    print(temperature_tensor)
+    print(type(temperature_tensor))
 
     return data
