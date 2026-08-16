@@ -18,8 +18,15 @@ def load_temperature_data():
     print(type(temperature))
 
     temperature_tensor = torch.tensor(temperature)
+
     print("PyTorch tensor:")
     print(temperature_tensor)
     print(type(temperature_tensor))
+
+
+    print("Tensor mean:", temperature_tensor.mean())
+    print("Tensor max:", temperature_tensor.max())
+    print("Tensor min:", temperature_tensor.min())
+    
 
     return data
