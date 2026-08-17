@@ -17,16 +17,29 @@ def load_temperature_data():
     print(temperature)
     print(type(temperature))
 
-    temperature_tensor = torch.tensor(temperature)
+    temperature_tensor = torch.tensor(
+        temperature, dtype=torch.float32
+        )
 
-    print("PyTorch tensor:")
-    print(temperature_tensor)
-    print(type(temperature_tensor))
+    temperature_mps = temperature_tensor.to("mps")
 
+    print("MPS Tensor:")
+    print(temperature_mps)
+    print("Device:", temperature_mps.device)
 
-    print("Tensor mean:", temperature_tensor.mean())
-    print("Tensor max:", temperature_tensor.max())
-    print("Tensor min:", temperature_tensor.min())
+    temperature_mean = temperature_mps.mean()
+
+    print("MPS Mean:", temperature_mean)
+    print("Result Device:", temperature_mean.device)
+
+    print("Tensor + 10:")
+    print(temperature_mps + 10)
+
+    print("Tensor * 2:")
+    print(temperature_mps *2)
+
+    print("Tensor squared:")
+    print(temperature_mps ** 2)
     
 
     return data
