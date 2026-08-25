@@ -1,5 +1,29 @@
 import pandas as pd
+import numpy as np
 import torch
+
+def load_thermal_txt(file_path):
+    with open(file_path, "r") as f:
+        text = f.read()
+
+    values = [int(value) for value in text.split(",") if value.strip()]
+
+    data = np.array(values)
+
+    print("Thermal data loaded")
+    print("Number of values:", len(data))
+    print("Data type:", data.dtype)
+    print("Minimum:", data.min())
+    print("Maximum:", data.max())
+    print("Mean:", data.mean())
+    print("Can reshape to 512 x 640:", data.size == 512 * 640)
+
+    thermal_image = data.reshape(512, 640)
+
+    print("Thermal image shape:", thermal_image.shape)
+    print("First row", thermal_image[0])
+
+    return data
 
 def load_temperature_data():
     data = pd.read_csv("data/temperature.csv")

@@ -21,3 +21,6 @@ __pycache__/
 
 # Research data / private data
 data/
+
+#Research lab data
+data/thermal/
