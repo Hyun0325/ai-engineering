@@ -338,9 +338,7 @@ NumPy is currently being used to:
 - Perform numerical calculations
 - Prepare data for further processing
 
-Example:
-
-temperature = data["temperature"].to_numpy()
+Example: temperature = data["temperature"].to_numpy()
 
 ### PyTorch Tensor
 
@@ -388,26 +386,23 @@ The thermal dataset contains numerical measurements and corresponding thermal im
 ### Thermal Text Data
 The numerical thermal data is stored as comma-separated integer values.
 
-Example:
+Example: 3339,3328,3306,3303,3299,...
 
-3339,3328,3306,3303,3299,...
 The current tested thermal text file contains:
+
 - Number of values: 327680
 - Data type: int64
 - Minimum: 3126
 - Maximum: 65115
 - Mean: approximately 3926.03
 
-The number of values satisfies:
+The number of values satisfies: 512 × 640 = 327680
 
-512 × 640 = 327680
-
-Therefore, the data can be reshaped into:
-
-512 × 640
+Therefore, the data can be reshaped into: 512 × 640
 
 Current processing:
 
+```text
 Thermal .txt
      ↓
 Read file
@@ -421,6 +416,7 @@ Python list
 NumPy array
      ↓
 512 × 640 array
+```
 
 ### Thermal Image Data
 
@@ -429,29 +425,20 @@ The corresponding thermal image is stored as a PNG file.
 The image is currently loaded using Pillow:
 from PIL import Image
 
-Example:
+Example: image = Image.open("data/thermal/...")
 
-image = Image.open("data/thermal/...")
+The tested PNG image has the size: 640 × 512
 
-The tested PNG image has the size:
-
-640 × 512
-
-The numerical thermal data has been reshaped to:
-
-512 × 640
+The numerical thermal data has been reshaped to: 512 × 640
 
 The relationship between the numerical data and the PNG image still needs to be investigated and verified.
 
 ### Important Thermal Data Interpretation
 
-The numerical values in the thermal text file currently range approximately from:
+The numerical values in the thermal text file currently range approximately from: 3126
 
-3126
+to: 65115
 
-to:
-
-65115
 These values must not yet be assumed to represent degrees Celsius.
 
 The exact physical meaning, unit, calibration method, scaling factor, and relationship between the numerical values and actual temperature have not yet been confirmed.
@@ -500,6 +487,7 @@ Current purpose:
 
 Next planned use:
 
+```text
 512 × 640 thermal NumPy array
         ↓
 matplotlib
@@ -537,6 +525,7 @@ Machine Learning
 Deep Learning
           ↓
 Engineering Application
+```
 
 # Research Direction
 
